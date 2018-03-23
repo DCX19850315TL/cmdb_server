@@ -15,11 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from api.views import index,receive_server_info
+from api.views import index
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     url(r'^index/',index),
-    url(r'^api/',include('api.urls')),
-    url(r'^receive_server_info/',receive_server_info),
 ]
