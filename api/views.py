@@ -10,6 +10,6 @@ def index(request):
 
 def receive_server_info(request):
 
-    print request.POST.get('data')
+    print request.POST
 
-    return HttpResponse('test')
+    return HttpResponse('test123')
