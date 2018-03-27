@@ -12,4 +12,4 @@ def receive_server_info(request):
 
     print request.POST.get('data')
 
-    return HttpResponse('ok')
+    return HttpResponse('test')
