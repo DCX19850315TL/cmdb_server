@@ -20,6 +20,7 @@ from api.views import index,receive_server_info
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/',index),
-    url(r'^api/',include('api.urls')),
     url(r'^receive_server_info/',receive_server_info),
+    url(r'^test/',include('api.urls')),
+    url(r'^api/',include('api.urls'))
 ]
