@@ -10,7 +10,8 @@ https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
-
+from put.lib.http_request import HttpRequest
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cmdb_server.settings")
 
 application = get_wsgi_application()
+application.request_class = HttpRequest
