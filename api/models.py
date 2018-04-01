@@ -9,6 +9,10 @@ class Test(models.Model):
 
     PassWord = models.CharField(max_length=255)
 
+    create_at = models.DateTimeField(blank=True,auto_now_add=True)
+
+    update_at = models.DateTimeField(blank=True,auto_now=True)
+
 #cmdb数据库设计
 #普通用户表
 class UserProfile(models.Model):

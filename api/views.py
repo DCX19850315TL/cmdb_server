@@ -6,6 +6,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import json
 from api import models
+from django.shortcuts import render_to_response
+from api.models import Test
 
 # Create your views here.
 def index(request):
@@ -57,3 +59,12 @@ def servers(request):
     if method == 'POST':
         pass
     return  Response('ddddd')
+
+def TestsList(request):
+    #获取test表里面的所有数据
+    tests_list = Test.objects.all()
+
+    #把数据嵌套在html中
+    #再把新的大字符串返回给客户端
+    result = render_to_response('test.html',{'data':tests_list,'user':'tanglei'})
+    return  result

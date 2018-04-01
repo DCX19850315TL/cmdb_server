@@ -21,6 +21,7 @@ from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from api import models
 from api import views
+from api.views import TestsList
 
 #=====User表的开始=====
 # Serializers define the API representation.
@@ -55,4 +56,5 @@ urlpatterns = [
     url(r'^index/',index),
     url(r'^server',views.servers),
     url(r'^', include(router.urls)),
+    url(r'^test/',TestsList),
 ]
