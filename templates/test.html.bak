@@ -1,6 +1,11 @@
-{% extends "master/layout.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Title</title>
+</head>
+<body>
 
-{% block content %}
     <h1>
         {{ user }}
     </h1>
@@ -32,4 +37,6 @@
             <h>tanglei</h>
         {% endifequal %}
     </div>
-{% endblock %}
+
+</body>
+</html>

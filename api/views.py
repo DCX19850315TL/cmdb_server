@@ -68,3 +68,13 @@ def TestsList(request):
     #再把新的大字符串返回给客户端
     result = render_to_response('test.html',{'data':tests_list,'user':'tanglei'})
     return  result
+
+def Login(request):
+    if request.method == 'POST':
+        user = request.POST.get('username',None)
+        pwd = request.POST.get('password',None)
+        print user,pwd
+        return render_to_response('login.html')
+    else:
+        return render_to_response('login.html')
+

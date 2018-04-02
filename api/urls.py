@@ -57,4 +57,5 @@ urlpatterns = [
     url(r'^server',views.servers),
     url(r'^', include(router.urls)),
     url(r'^test/',TestsList),
+    url(r'^login/$',views.Login),
 ]
